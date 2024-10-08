@@ -1,11 +1,12 @@
-/* Font Face Definitions */
-@font-face {
+ /* Font Face Definitions */
+ @font-face {
   font-family: 'Montserrat';
   src: url('assets/fonts/montserrat/Montserrat-Regular.woff2') format('woff2'),
        url('assets/fonts/montserrat/Montserrat-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Poppins';
   src: url('assets/fonts/poppins/Poppins-Regular.woff2') format('woff2'),
@@ -13,6 +14,7 @@
        url('assets/fonts/poppins/Poppins-Regular.ttf') format('truetype');
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Poppins';
   src: url('assets/fonts/poppins/Poppins-Bold.woff2') format('woff2'),
@@ -26,10 +28,12 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
-html{
+
+html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
+
 /* Fixed Navbar Styling */
 .navbar {
   position: fixed;
@@ -48,7 +52,8 @@ html{
   font-weight: 600;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: #86654b;
   text-decoration: underline;
 }
@@ -78,7 +83,11 @@ html{
   margin-top: 6em;
 }
 
-.text-muted, .course-text, .about-text, .text-center, .contact-text {
+.text-muted,
+.course-text,
+.about-text,
+.text-center,
+.contact-text {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
 }
@@ -132,14 +141,15 @@ html{
   font-weight: bold;
 }
 
-.btn-primary, .btn-dark {
+.btn-primary {
   color: #000000;
   font-weight: bold;
   border: none;
   padding: 10px 30px;
+  background-color: #d1c8c1;
 }
 
-.btn-primary:hover, .btn-dark:hover {
+.btn-primary:hover {
   background-color: #cbb7a6;
 }
 
@@ -150,24 +160,244 @@ html{
 
 .contact-form input,
 .contact-form textarea {
-  background-color: #d1c8c1;
+  background-color: #d1c8c1;  /* Set background color */
+  border: none;  /* No border by default */
+  padding: 10px; /* Add padding for better spacing */
+  outline: none; /* Remove default outline */
+  transition: border 0.3s ease; /* Smooth transition for border */
+  color: #000; /* Ensure text color is readable */
+}
+
+/* Ensure background color stays the same on focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: #d1c8c1;  /* Maintain background color */
+  border: 2px solid #86654b;  /* Add border on focus */
+  color: #000;  /* Keep text color consistent */
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #f8f9fa; /* Or any desired background color */
+  padding: 15px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Separate the content */
+  align-items: center;
+  flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+}
+
+.footer-text {
+  text-align: left; /* Align the paragraph to the left */
+}
+
+.footer-links {
+  text-align: right; /* Align the list items to the right */
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-content ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-content li {
+  margin-left: 15px; /* Add space between links */
+}
+
+.footer-content a {
+  color: #6c757d; /* Ensure links are muted */
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline; /* Underline on hover */
 }
 
 /* Media Queries for Responsiveness */
+@media (min-width: 1400px) {
+  /* Desktop-specific adjustments, if any */
+}
+
 @media (max-width: 1200px) {
-  body {
-      padding: 0 0;
-  }
   .navbar {
-      width: 95%;
+    width: 95%;
+  }
+
+  .hero {
+    height: 400px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .info-text {
+    max-width: 80%;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    height: 250px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 992px) {
   .hero {
-      height: 400px;
+    height: 300px;
   }
+
   .hero h1 {
-      font-size: 2.5
+    font-size: 2rem;
+    margin-top: 4em;
   }
+
+  .info-images img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .navbar-nav {
+    font-size: 1.2rem;
+  }
+
+  .img-fluid-about {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-brand img {
+    width: 40px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    margin-top: 3em;
+  }
+
+  .info-images img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .about-text,
+  .course-text,
+  .text-muted {
+    font-size: 14px;
+  }
+
+  .img-fluid-about {
+    height: 250px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    height: 150px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .shop-img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .navbar-nav {
+    font-size: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .info-images img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .about-text {
+    font-size: 13px;
+  }
+
+  .shop-img {
+    height: 150px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    height: 100px;
+  }
+
+  .btn-warning,
+  .btn-primary {
+    padding: 8px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+
+  footer ul {
+    display: block;
+    padding: 0;
+  }
+
+  footer ul li {
+    margin-bottom: 10px;
+  }
+}
+
+/* Carousel control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 350px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 500px;
+}
+
+.carousel-control-prev {
+  left: -8%;
+}
+
+.carousel-control-next {
+  right: -8%;
 }
