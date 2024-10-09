@@ -42,7 +42,7 @@ html {
 }
 
 .navbar-brand img {
-  width: 50px;
+  width: 60px;
   height: auto;
 }
 
@@ -67,7 +67,7 @@ html {
   background-image: url('../images/home1.jpg');
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 400px;
   position: relative;
 }
 
@@ -79,8 +79,7 @@ html {
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-top: 6em;
+  margin: 6em 0 1em 1em;
 }
 
 .text-muted,
@@ -93,9 +92,9 @@ html {
 }
 
 /* Info Section Styling */
-.info-text {
-  text-align: left;
-}
+/* .info-text {
+  text-align: end;
+} */
 
 .info-images img {
   width: 200px;
@@ -155,46 +154,41 @@ html {
 
 .contact-form {
   padding: 40px;
-  border-radius: 8px;
 }
 
 .contact-form input,
 .contact-form textarea {
-  background-color: #d1c8c1;  /* Set background color */
-  border: none;  /* No border by default */
-  padding: 10px; /* Add padding for better spacing */
-  outline: none; /* Remove default outline */
-  transition: border 0.3s ease; /* Smooth transition for border */
-  color: #000; /* Ensure text color is readable */
+  background-color: #d1c8c1;
+  border: none;
+  padding: 10px;
+  outline: none;
+  transition: border 0.3s ease; 
+  color: #000;
 }
 
 /* Ensure background color stays the same on focus */
 .contact-form input:focus,
 .contact-form textarea:focus {
-  background-color: #d1c8c1;  /* Maintain background color */
-  border: 2px solid #86654b;  /* Add border on focus */
-  color: #000;  /* Keep text color consistent */
+  background-color: #d1c8c1;
+  border: 2px solid #86654b;
+  color: #000;
 }
 
 /* Footer Styling */
-.footer {
-  background-color: #f8f9fa; /* Or any desired background color */
-  padding: 15px;
-}
 
 .footer-content {
   display: flex;
-  justify-content: space-between; /* Separate the content */
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+  flex-wrap: wrap;
 }
 
 .footer-text {
-  text-align: left; /* Align the paragraph to the left */
+  text-align: left;
 }
 
 .footer-links {
-  text-align: right; /* Align the list items to the right */
+  text-align: right;
 }
 
 .footer-content p {
@@ -207,16 +201,16 @@ html {
 }
 
 .footer-content li {
-  margin-left: 15px; /* Add space between links */
+  margin-left: 15px;
 }
 
 .footer-content a {
-  color: #6c757d; /* Ensure links are muted */
+  color: #6c757d;
   text-decoration: none;
 }
 
 .footer-content a:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
 }
 
 /* Media Queries for Responsiveness */
